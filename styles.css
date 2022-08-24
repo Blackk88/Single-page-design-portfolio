@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-white: #FFF7F0;
+    --color-medium-brown: #7A746E;
+    --color-black: #030303;
+}
+
+body, html {
+    margin: 0;
+    font-family: "Plus Jakarta sans", sans-serif;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fef7f0;
+    
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url(./assets/fonts/PlusJakartaSans-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url(./assets/fonts/PlusJakartaSans-Medium.ttf);
+    font-weight: 400;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+.feature-header {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+.section-header {
+    font-size: 1.625rem;
+    margin-bottom: 1.5rem;
+}
+
+.skills-header {
+    font-size: 1.5rem;
+}
+
+.body-text {
+    font-size: 1rem;
+    line-height: 26px;
+}
+
+
+.text-color--white {
+    color: #fff7f0;
+}
+
+.text-color--black {
+    color: #030303;
+}
+
+.text-color--grey {
+    color: #7A746E;
+}
+
+a {
+    text-decoration: none;
+    color: #030303;
+}
+
+/* Main Layout */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    max-height: 100%;
+}
+
+.btn {
+    padding: 1em 2em;
+    border-radius: 2em;
+    font-size: 0.875rem;
+    color: #fef7f0;
+    font-weight: 700;
+    /* margin: 2em; */
+}
+
+.section--dark {
+    background-color: #030303;
+    color: #FFF7F0;
+    border-radius: 10px;
+}
+
+.btn-dark {
+    background-color: #030303;
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+    background-color: #755cde;
+}
+
+.btn-light {
+    background-color: #eb7565;
+}
+
+.btn-light:hover,
+.btn-light:focus {
+    background-color: #F6A560;
+}
+
+.feature p {
+    width: 285px;
+    margin: 0 auto;
+}
+
+/* Skills section */
+
+.skills-container {
+    margin-top: 2em;
+    display: grid;
+    grid-template: auto / 1fr 1fr;
+    gap: 2em;
+}
+
+.skills {
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+    padding: 1.5em 1.5em;
+}
+
+.big-box,
+.medium-box {
+    grid-column: 1 / -1;
+}
+
+.big-box {
+    height: 364px;
+}
+
+.medium-box,
+.small-box {
+    height: 182px;
+}
+
+.skills--graphic-design {
+    background-color: #755CDE;
+}
+
+.skills--ui-ux {
+    background-color: #F6A560;
+}
+
+.skills--apps {
+    background-color: #F39E9E;
+}
+
+.skills--photography {
+    background-color: #61C4B7;
+}
+
+.skills--illustration {
+    background-color: #EB7565;
+}
+
+.skills--motion-graphics {
+    background-color: #552049;
+}
+
+.skills-header {
+    align-self: end;
+}
+
+.skills-pattern-image {
+    position: absolute;
+    right: 2em;
+}
+
+.big {
+    width: 130px;
+}
+
+.small {
+    height: 64px;
+}
+
+/* Section about */
+
+.about {
+    margin: 6rem 0;
+}
+
+.amy-photo {
+    margin-bottom: 2.5em;
+    max-width: 300px;
+}
+
+.about p {
+    margin-bottom: 2rem;
+}
+
+/* Carousel */
+
+.my-work {
+    margin: 6em -2rem;
+    /* width: 100%; */
+}
+
+.my-work img {
+    position: relative;
+    width: 270px;
+    min-height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.carousel-image-wrapper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+        "left mid right";
+
+    /* overflow-wrap: none; */
+    justify-content: center;
+    gap: 1em;
+    overflow: hidden;
+}
+
+.center {
+    grid-area: mid;
+}
+.left {
+    grid-area: left;
+}
+.right {
+    grid-area: right;
+}
+
+.display--none {
+    display: none;
+}
+
+
+/* .left {
+    flex-grow: none;
+} */
+
+
+
+.carousel-control-flex {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #030303;
+    width: 64px;
+    height: 64px;
+    border-radius: 50vh;
+    color: #FFF7F0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 2em 1.25em 5em;
+}
+
+footer p {
+    margin-bottom: 2.5rem;
+}

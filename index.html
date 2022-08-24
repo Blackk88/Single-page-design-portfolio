@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/89e255c4f2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Frontend Mentor | Single-page design portfolio</title>
+</head>
+<body>
+  
+  <header>
+    <img class="logo" src="./assets/images/logo.svg" alt="">
+    <a class="btn btn-dark" href="#">Free Consultation</a>
+  </header>
+
+  <section class="feature">
+    <h2 class="feature-header">Design solutions made easy</h2>
+    <p class="text-body--small text-color--grey">With over ten years of experience in various design disciplines, I’m your one-stop shop for your design needs.</p>
+      <div class="skills-container">
+
+        <div class="skills big-box skills--graphic-design">
+          <h4 class="skills-header text-color--white">Graphic Design</h4>
+          <img class="skills-pattern-image big" src="./assets/images/pattern-graphic-design.svg" alt="">
+        </div>
+
+        <div class="skills small-box skills--ui-ux">
+          <h4 class="skills-header text-color--white">UI/UX</h4>
+          <img class="skills-pattern-image small" src="./assets/images/pattern-ui-ux.svg" alt="" class="skills-pattern-image">
+        </div>
+        
+        <div class="skills small-box skills--apps">
+          <h4 class="skills-header text-color--white">Apps</h4>
+          <img class="skills-pattern-image small" src="./assets/images/pattern-apps.svg" alt="" class="skills-pattern-image">
+        </div>
+        
+        <div class="skills medium-box skills--illustration">
+          <h4 class="skills-header text-color--white">Illustrations</h4>
+          <img class="skills-pattern-image small" src="./assets/images/pattern-illustrations.svg" alt="" class="skills-pattern-image">
+        </div>
+        
+        <div class="skills medium-box skills--photography">
+          <h4 class="skills-header text-color--white">Photography</h4>
+          <img class="skills-pattern-image small" src="./assets/images/pattern-photography.svg" alt="" class="skills-pattern-image">
+        </div>
+        
+        <div class="skills medium-box skills--motion-graphics">
+          <h4 class="skills-header text-color--white">Motion Graphics</h4>
+          <img class="skills-pattern-image small" src="./assets/images/pattern-motion-graphics.svg" alt="" class="skills-pattern-image">
+        </div>
+
+      </div>
+  </section>
+
+  <section class="about">
+    <img class="amy-photo" src="./assets/images/image-amy.webp" alt="Amy smiling">
+    <h2 class="section-header text-color--black">I'm Amy, and I'd love to work on your next project</h2>
+    <p class="body-text text-color--grey">I love working with others to create beautiful design solutions. I’ve designed everything from brand illustrations 
+      to complete mobile apps. I’m also handy with a camera!</p>
+      <a class="btn btn-light" href="#">Free Consultation</a>
+  </section>
+
+  <section class="my-work">
+    <h2 class="section-header">My Work</h2>
+
+    <div class="carousel-image-wrapper">
+      <img class="center" src="./assets/images/image-slide-1.jpg" alt="">
+      <img class="right" src="./assets/images/image-slide-2.jpg" alt="">
+      <img class="left" src="./assets/images/image-slide-3.jpg" alt="">
+      <img class="display--none" src="./assets/images/image-slide-4.jpg" alt="">
+      <img class="display--none" src="./assets/images/image-slide-5.jpg" alt="">
+    </div>
+
+    <div class="carousel-control-flex">
+      <div class="carousel-control" id="carousel-left"><i class="fa-solid fa-arrow-left"></i></div>
+      <div class="carousel-control" id="carousel-right"><i class="fa-solid fa-arrow-right"></i></div>
+    </div>
+  </section>
+
+  <footer class="section--dark">
+    <h4 class="section-header">Book a call with me</h4>
+    <p class="body-text">I’d love to have a chat to see how I can help you. The best first step is for us to discuss your project during a 
+      free consultation. Then we can move forward from there.</p>
+      <a class="btn btn-light" href="#">Free Consultation</a>
+  </footer>
+  <script src="index.js"></script>
+</body>
+</html>
