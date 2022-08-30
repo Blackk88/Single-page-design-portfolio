@@ -212,7 +212,6 @@ header {
 
 .my-work {
     margin: 6em -2rem;
-    /* width: 100%; */
 }
 
 .my-work img {
@@ -227,11 +226,7 @@ header {
 
 .carousel-image-wrapper {
     display: grid;
-    /* grid-template-columns: auto; */
     grid-template-columns: repeat(5, auto);
-        /* "left mid right"; */
-
-    /* overflow-wrap: none; */
     justify-content: center;
     gap: 1em;
     overflow: hidden;
@@ -250,13 +245,6 @@ header {
 .display--none {
     display: none;
 }
-
-
-/* .left {
-    flex-grow: none;
-} */
-
-
 
 .carousel-control-flex {
     margin-top: 1rem;
@@ -339,7 +327,6 @@ footer p {
     }
 
     .about-wrapper {
-        /* align-self: center; */
         text-align: left;
         padding: 0 1.5em;
 
@@ -383,10 +370,6 @@ footer p {
 
     .amy-photo {
         width: 445px;
-        transform: none;
-        /* object-fit: cover; */
-        /* height: 364px; */
-        /* transform: translateX(-20%); */
     }
 
     .about-wrapper {
