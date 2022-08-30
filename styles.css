@@ -347,6 +347,9 @@ footer p {
 
 
 @media (min-width: 1200px) {
+    body {
+        width: 70%;
+    }
     .feature-header {
         font-size: 3.5rem;
     }
