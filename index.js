@@ -6,34 +6,40 @@ const workExamples = [
     "image-slide-5.jpg"
 ]
 
-let count = 2
-
+const carouselControlEl = document.querySelectorAll(".carousel-control")
 const workExamplesEl = document.querySelector(".carousel-image-wrapper")
-const examplesAmount = workExamples.length
 
-let test = document.querySelectorAll(".carousel-image-wrapper img")
+let array = [1, 2, 3, 4, 5]
 
-
-
-document.querySelector("#carousel-left").addEventListener('click', () => {
-    if (count === 1) {
-        count = examplesAmount
-    } else count--
+function carouselHandler(event) {
+    const targetEl = event.currentTarget.id
     
-    workExamplesEl.innerHTML = `
-        <img class="" src="./assets/images/image-slide-${count-1 === 0 ? examplesAmount : count-1}.jpg" alt="">
-        <img class="" src="./assets/images/image-slide-${count}.jpg" alt="">
-        <img class="" src="./assets/images/image-slide-${count+1 > examplesAmount ? examplesAmount-1 : count+1}.jpg" alt="">
-    `
-})
-document.querySelector("#carousel-right").addEventListener('click', () => {
-    if (count === examplesAmount) {
-        count = 1
-    } else count++
+    if (targetEl === "carousel-left" && (event.key === "ArrowLeft" || !event.key)) {
+        slide("left")
+    } else if (targetEl === "carousel-right" && (event.key === "ArrowRight" || !event.key)) {
+        slide("right")
+    }
+}
+
+function slide(direction) {
+    if (direction === "left") {
+        array.push(array.shift())
+    } else if (direction === "right") {
+        array.unshift(array.pop())
+    }
+
+    let workElements = array.map(item => {
+        return `<img class="" src="./assets/images/image-slide-${item}.jpg" alt=""></img>`
+    }).join("")
+
+    workExamplesEl.innerHTML = workElements
     
-    workExamplesEl.innerHTML = `
-        <img class="" src="./assets/images/image-slide-${count-1 === 0 ? examplesAmount : count - 1}.jpg" alt="">
-        <img class="" src="./assets/images/image-slide-${count}.jpg" alt="">
-        <img class="" src="./assets/images/image-slide-${count+1 > examplesAmount ? examplesAmount - 1 : count+1}.jpg" alt="">
-    `
-})
+}
+
+carouselControlEl.forEach(item => {item.addEventListener("click", carouselHandler)})
+carouselControlEl.forEach(item => {item.addEventListener("keydown", carouselHandler)})
+
+
+
+
+

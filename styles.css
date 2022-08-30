@@ -202,7 +202,7 @@ header {
 .amy-photo {
     margin-bottom: 2.5em;
     width: 300px;
-}
+    }
 
 .about p {
     margin-bottom: 2rem;
@@ -347,8 +347,7 @@ footer p {
 
     .amy-photo {
         width: 344px;
-        /* object-fit: cover; */
-        /* height: 364px; */
+        height: 364px;
         transform: translateX(-20%);
     }
 
